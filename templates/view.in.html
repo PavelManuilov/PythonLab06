@@ -1,0 +1,68 @@
+<html>
+  <head>
+    {% if title %}
+    <title>лабораторная работа № {{title}}</title>
+    {% else %}
+    <title>лабораторная работа</title>
+    {% endif %}
+    <style>
+        /* внешние границы таблицы серого цвета толщиной 1px */
+        table {
+           border: 1px solid grey;
+           border-collapse: collapse;
+           margin: 5px;
+           padding: 5px;
+        }
+        /* границы ячеек первого ряда таблицы */
+        th {
+           border: 2px solid grey;
+           padding: 15px;
+        }
+        /* границы ячеек тела таблицы */
+        td {
+           border: 1px solid grey;
+           padding: 4px;
+        }
+        .box { border: 2px solid blue;
+        }
+    </style>
+  </head>
+  <body>
+<!--
+комментарий
+ещё один
+ -->
+    <h1>Лабораторная работа № 6</h1>
+    <table>
+    <caption>Список праздников</caption>
+      <tr>
+        <th>№ п/п</th>
+        <th>Дата</th>
+        <th>Название</th>
+        <th>особенность</th>
+        <th>прим.</th>
+      </tr>
+
+      {% for var in var1 %}
+        <tr>
+            <td></td>
+            <td>{{ var['datetime'] }}</td>
+            <td>{{ var['description'] }}</td>
+            {% if var['type']==0 %}
+            <td>выходной</td>
+            {% elif var['type']==1 %}
+            <td>рабочий</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td></td>
+        </tr>
+      {% endfor %}
+
+    </table>
+<! --  { { var1 } } -->
+  </body>
+</html>
+
+
+

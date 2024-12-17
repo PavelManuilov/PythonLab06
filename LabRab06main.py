@@ -3,7 +3,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
+#тестирование GitHub
 @app.route('/')
 @app.route('/index')
 def index():
