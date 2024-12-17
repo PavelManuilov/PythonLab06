@@ -1,6 +1,7 @@
 import datetime
 import re
 
+# библиотека для личных нужд
 
 def dt(pstr):
     '''

@@ -149,3 +149,5 @@ def getTable(p_connection,pTable):
         print('ошибка с БД', e)
     finally:
         xcursor.close()
+
+#библиотека для лабораторной работы №6
